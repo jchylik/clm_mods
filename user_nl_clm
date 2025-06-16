@@ -1,0 +1,40 @@
+!----------------------------------------------------------------------------------
+! Users should add all user specific namelist changes below in the form of
+! namelist_var = new_namelist_value
+!
+! EXCEPTIONS:
+! Set use_cndv           by the compset you use and the CLM_BLDNML_OPTS -dynamic_vegetation setting
+! Set use_vichydro       by the compset you use and the CLM_BLDNML_OPTS -vichydro           setting
+! Set use_cn             by the compset you use and CLM_BLDNML_OPTS -bgc  setting
+! Set use_crop           by the compset you use and CLM_BLDNML_OPTS -crop setting
+! Set spinup_state       by the CLM_BLDNML_OPTS -bgc_spinup      setting
+! Set irrigate           by the CLM_BLDNML_OPTS -irrig .true.    setting
+! Set co2_ppmv           with CCSM_CO2_PPMV                      option
+! Set dtime              with L_NCPL                             option
+! Set fatmlndfrc         with LND_DOMAIN_PATH/LND_DOMAIN_FILE    options
+! Set finidat            with RUN_REFCASE/RUN_REFDATE/RUN_REFTOD options for hybrid or branch cases
+!                        (includes $inst_string for multi-ensemble cases)
+!                        or with CLM_FORCE_COLDSTART to do a cold start
+!                        or set it with an explicit filename here.
+! Set maxpatch_glcmec    with GLC_NEC                            option
+! Set glc_do_dynglacier  with GLC_TWO_WAY_COUPLING               env variable
+!----------------------------------------------------------------------------------
+
+paramfile = '/cluster/projects/nn10054k/janchy/inputdata/clm5_params.c230302.nc'
+flanduse_timeseries = '/cluster/shared/noresm/inputdata/lnd/clm2/surfdata_map/release-clm5.0.14-Nor_v1.0.4/RESCUE/landuse.timeseries_1.9x2.5_rescue-EocBudg1150-OAE-on_78pfts_CMIP6_simyr1850-2100_c250121.nc'
+
+&clm_inparm
+hist_mfilt    = 1,1,30,30
+hist_nhtfrq   = 0,0,-24,-24
+hist_fincl1   = 'TOTECOSYSC','TOTECOSYSN','TOTSOMC','TOTSOMN','TOTVEGC','TOTVEGN','TLAI','GPP','CPOOL','NBP','NEE','NPP','AGNPP','AR','FCTR','LEAFC','LEAFN','QVEGT','GRAINC','GRAINN','LNC','LITFALL','BTRANMN','CPHASE','NPP_NUPTAKE','NFIX','WOODC','EFLX_LH_TOT','STORVEGC','MR','GR','NPP_NACTIVE','NPP_NFIX','NPP_GROWTH','NACTIVE','NDEPLOY','SMINN','SMIN_NO3_LEACHED','NRETRANS','NUPTAKE','NET_NMIN','DENIT','NPP_NRETRANS','GDDHARV','GDDPLANT','GRAINC_TO_FOOD','GRAINC_TO_FOOD'
+hist_fincl2   = 'TOTECOSYSC','TOTECOSYSN','TOTSOMC','TOTSOMN','TOTVEGC','TOTVEGN','TLAI','GPP','CPOOL','NBP','NEE','NPP','AGNPP','AR','FCTR','LEAFC','LEAFN','QVEGT','GRAINC','GRAINN','LNC','LITFALL','BTRANMN','CPHASE','NPP_NUPTAKE','NFIX','WOODC','EFLX_LH_TOT','STORVEGC','MR','GR','NPP_NACTIVE','NPP_NFIX','NPP_GROWTH','NACTIVE','NDEPLOY','SMINN','SMIN_NO3_LEACHED','NRETRANS','NUPTAKE','NET_NMIN','DENIT','NPP_NRETRANS','GDDHARV','GDDPLANT','GRAINC_TO_FOOD','GRAINC_TO_FOOD'
+hist_fincl3   = 'GDDPLANT','CPHASE','GDDHARV'
+hist_fincl4   = 'GDDPLANT','CPHASE','GDDHARV'
+hist_fexcl1 = 'CWDC_vr','CWDN_vr','HR_vr','CONC_O2_SAT','CONC_O2_UNSAT','O_SCALAR','W_SCALAR','T_SCALAR',
+              'SMINN_vr','SMIN_NH4_vr','SMIN_NO3_vr','VEGWP','SMP',
+              'LITR1C_vr','LITR2C_vr','LITR3C_vr','LITR1N_vr','LITR2N_vr','LITR3N_vr',
+              'SOIL1C_vr','SOIL2C_vr','SOIL3C_vr','SOIL1N_vr','SOIL2N_vr','SOIL3N_vr'
+hist_dov2xy   = .true.,.false.,.true.,.false.
+
+
+
