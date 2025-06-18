@@ -21,10 +21,10 @@
 !----------------------------------------------------------------------------------
 
 paramfile = '/cluster/projects/nn10054k/janchy/inputdata/clm5_params.c230302.nc'
-flanduse_timeseries = '/cluster/projects/nn10054k/janchy/inputdata/landuse.timeseries_1.9x2.5_rescue-EocBudg1150-OAE-on_78pfts_CMIP6_simyr1850-2100_c250121mod3.nc'
-
+flanduse_timeseries = '/cluster/shared/noresm/inputdata/lnd/clm2/surfdata_map/release-clm5.0.14-Nor_v1.0.4/RESCUE/landuse.timeseries_1.9x2.5_rescue-EocBudg1150-OAE-on_78pfts_CMIP6_simyr1850-2100_c250121.nc'
 
 &clm_inparm
+use_init_interp = .true.
 hist_mfilt    = 1,1,30,30
 hist_nhtfrq   = 0,0,-24,-24
 hist_fincl1   = 'TOTECOSYSC','TOTECOSYSN','TOTSOMC','TOTSOMN','TOTVEGC','TOTVEGN','TLAI','GPP','CPOOL','NBP','NEE','NPP','AGNPP','AR','FCTR','LEAFC','LEAFN','QVEGT','GRAINC','GRAINN','LNC','LITFALL','BTRANMN','CPHASE','NPP_NUPTAKE','NFIX','WOODC','EFLX_LH_TOT','STORVEGC','MR','GR','NPP_NACTIVE','NPP_NFIX','NPP_GROWTH','NACTIVE','NDEPLOY','SMINN','SMIN_NO3_LEACHED','NRETRANS','NUPTAKE','NET_NMIN','DENIT','NPP_NRETRANS','GDDHARV','GDDPLANT','GRAINC_TO_FOOD','GRAINC_TO_FOOD'
@@ -36,8 +36,4 @@ hist_fexcl1 = 'CWDC_vr','CWDN_vr','HR_vr','CONC_O2_SAT','CONC_O2_UNSAT','O_SCALA
               'LITR1C_vr','LITR2C_vr','LITR3C_vr','LITR1N_vr','LITR2N_vr','LITR3N_vr',
               'SOIL1C_vr','SOIL2C_vr','SOIL3C_vr','SOIL1N_vr','SOIL2N_vr','SOIL3N_vr'
 hist_dov2xy   = .true.,.false.,.true.,.false.
-
-
-
-
 
