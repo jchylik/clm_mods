@@ -10,6 +10,17 @@ The source files and parameter files in this repository are supposed to work tog
 * parameter file combines the "good" portions of previously used parameter files in order to fulfill requirements 
 * land use files NOT included here due to size
 
+## Specifications
+
+### User namelists
+
+The user_nl_clm namelist was modified to allow runds with different landuse files and restarts
+
+The list of namelist versions
+* user_nl_clm.control : modified parameter file only,  extra outputs, suitable for cold start
+* user_nl_clm.restart : additional interpolation flag, so suitable for restarts
+* user_nl_clm.modlnd  : modified landuse file, not suitable for restarts   
+
 ## Sources
 
 [^1]: Cheng, Y., Huang, M., Chen, M., Guan, K., Bernacchi, C., Peng, B. & Tan, Z. (2019). Parameterizing perennial bioenergy crops in Version 5 of the Community Land Model Based on Site‐Level Observations in the Central Midwestern United States. Journal of Advances in Modeling Earth Systems, 2(2013), 1–24. [doi.org/10.1029/2019MS001719](https://doi.org/10.1029/2019MS001719 "Chenge et al. 2013")
