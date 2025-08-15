@@ -1,0 +1,55 @@
+! Users should add all user specific namelist changes below in the form of 
+! namelist_var = new_namelist_value 
+
+ co2flux_fuel_file              = '/cluster/projects/nn10054k/bourgeois/rescue/emissions/Direct-2025-06-25-rescue-EocBudg1150-OAE-on/emissions_CO2_anthro_surface_rescue-EocBudg1150-OAE-on_201401-210112_fv_1.9x2.5_c20250728.nc'
+
+ aircraft_datapath              = '/cluster/projects/nn10054k/bourgeois/rescue/emissions/Direct-2025-06-25-rescue-EocBudg1150-OAE-on/'
+
+ aircraft_specifier             = 'ac_CO2 -> emissions_CO2_anthro_ac_rescue-EocBudg1150-OAE-on_201401-210112_fv_1.9x2.5_c20250124.txt'
+
+flbc_file              = '/cluster/projects/nn10054k/bourgeois/rescue/lb/Direct-2024-10-11-rescue-EocBudg1150-OAE-on-2024-10-29/LBC_2014-2101_rescue-EocBudg1150-OAE-on_0p5degLat_GlobAnnAvg_c20241211.nc'
+
+ ext_frc_specifier              = 'H2O    ->  /cluster/shared/noresm/inputdata/atm/cam/chem/emis/elev/H2OemissionCH4oxidationx2_3D_L70_2014-2101_CMIP6-SSP1-2.6_c190307.nc',
+         'BC_AX  ->  /cluster/shared/noresm/inputdata/atm/cam/chem/emis/rescue_emissions_version20241011/emissions_cmip6_noresm2_ssp-rescue-EocBudg1150-OAE-on_BC_AX_all_vertical_2014-2301_1.9x2.5_version20241011.nc',
+         'BC_AX  ->  /cluster/shared/noresm/inputdata/atm/cam/chem/emis/rescue_emissions_version20241011/emissions_cmip6_noresm2_ssp-rescue-EocBudg1150-OAE-on_BC_AX_all_vertical_2014-2301_1.9x2.5_version20241011.nc',
+         'BC_N   ->  /cluster/shared/noresm/inputdata/atm/cam/chem/emis/rescue_emissions_version20241011/emissions_cmip6_noresm2_ssp-rescue-EocBudg1150-OAE-on_BC_N_all_vertical_2014-2301_1.9x2.5_version20241011.nc',
+         'BC_NI  ->  /cluster/shared/noresm/inputdata/atm/cam/chem/emis/rescue_emissions_version20241011/emissions_cmip6_noresm2_ssp-rescue-EocBudg1150-OAE-on_BC_NI_all_vertical_2014-2301_1.9x2.5_version20241011.nc',
+         'OM_NI  ->  /cluster/shared/noresm/inputdata/atm/cam/chem/emis/rescue_emissions_version20241011/emissions_cmip6_noresm2_ssp-rescue-EocBudg1150-OAE-on_OM_NI_all_vertical_2014-2301_1.9x2.5_version20241011.nc',
+         'SO2    ->  /cluster/shared/noresm/inputdata/atm/cam/chem/emis/rescue_emissions_version20241011/emissions_cmip6_noresm2_ssp-rescue-EocBudg1150-OAE-on_SO2_all_vertical_2014-2301_1.9x2.5_version20241011.nc',
+         'SO4_PR ->  /cluster/shared/noresm/inputdata/atm/cam/chem/emis/rescue_emissions_version20241011/emissions_cmip6_noresm2_ssp-rescue-EocBudg1150-OAE-on_SO4_PR_all_vertical_2014-2301_1.9x2.5_version20241011.nc'
+
+ srf_emis_specifier             = 'BC_AX  ->  /cluster/shared/noresm/inputdata/atm/cam/chem/emis/rescue_emissions_version20241011/emissions_cmip6_noresm2_ssp-rescue-EocBudg1150-OAE-on_BC_AX_all_surface_2014-2301_1.9x2.5_version20241011.nc',
+         'BC_N   ->  /cluster/shared/noresm/inputdata/atm/cam/chem/emis/rescue_emissions_version20241011/emissions_cmip6_noresm2_ssp-rescue-EocBudg1150-OAE-on_BC_N_all_surface_2014-2301_1.9x2.5_version20241011.nc',
+         'OM_NI  ->  /cluster/shared/noresm/inputdata/atm/cam/chem/emis/rescue_emissions_version20241011/emissions_cmip6_noresm2_ssp-rescue-EocBudg1150-OAE-on_OM_NI_all_surface_2014-2301_1.9x2.5_version20241011.nc',
+         'SO2    ->  /cluster/shared/noresm/inputdata/atm/cam/chem/emis/rescue_emissions_version20241011/emissions_cmip6_noresm2_ssp-rescue-EocBudg1150-OAE-on_SO2_all_surface_2014-2301_1.9x2.5_version20241011.nc',
+         'SO4_PR ->  /cluster/shared/noresm/inputdata/atm/cam/chem/emis/rescue_emissions_version20241011/emissions_cmip6_noresm2_ssp-rescue-EocBudg1150-OAE-on_SO4_PR_all_surface_2014-2301_1.9x2.5_version20241011.nc'
+
+nhtfrq = 0, -24,  -6  
+mfilt  = 1, 365, 292  
+ndens  = 2,   2,   2
+
+history_aerosol=.false.
+history_chemistry=.false.   
+history_chemspecies_srf=.false.   
+history_clubb=.false.   
+
+
+fincl1='SST','PRECT','RHREFHT','TREFMXAV','TREFMNAV','TROP_P','TROP_T','TROP_Z'
+
+fexcl1='ADRAIN','ADSNOW','ANRAIN','ANSNOW','AQRAIN','AQSNOW','AREI','AREL','ASYMMVIS','AWNC','AWNI','EXTVIS','SSAVIS',
+       'BC_A','BC_AC','BC_A_OCW','BC_AC_OCW','BC_AI','BC_AI_OCW','BC_AX','BC_N','BC_N_OCW','BC_NI','BC_NI_OCW',
+       'OM_AC','OM_AC_OCW','OM_AI','OM_AI_OCW','OM_NI','OM_NI_OCW','SO2','DMS',
+       'SO4_A1','SO4_A1_OCW','SO4_A2','SO4_A2_OCW','SO4_AC','SO4_AC_OCW','SO4_NA','SO4_NA_OCW','SO4_PR','SO4_PR_OCW',
+       'SOA_A1','SOA_A1_OCW','SOA_NA','SOA_NA_OCW','SOA_LV','SOA_SV',
+       'SS_A1','SS_A1_OCW','SS_A2','SS_A2_OCW','SS_A3','SS_A3_OCW',
+       'DST_A2','DST_A2_OCW','DST_A3','DST_A3_OCW','H2O2','H2SO4','HO2_aft','HO2_bef','NO3_aft','NO3_bef','OH_aft','OH_bef',
+       'mmr_BC','mmr_DUST','mmr_OM','mmr_SALT','mmr_SULFATE','isoprene','monoterp','ozone','UU','dU','dUa','dUf','VV','dV','dVa','VU',
+       'DCQ','DTCOND','DTV','ICIMR','ICWMR'
+
+
+fincl2 = 'TREFHT:A', 'TREFHTMN:M', 'TREFHTMX:X', 'PRECT:A'
+
+fincl3 ='TREFHT:A', 'QREFHT:A', 'RHREFHT:A', 'PS:A', 'U10:A', 'PRECT:A', 'CLDTOT:A', 'FSDS:A', 'FLDS:A', 'LHFLX:A', 'SHFLX:A'
+
+
+
