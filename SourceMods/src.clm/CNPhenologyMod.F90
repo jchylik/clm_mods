@@ -2570,7 +2570,7 @@ contains
                ! NOTE(slevis, 2014-12) results in -ve livestemn and -ve totpftn
                !X! livestemn_to_litter(p) = livestemc_to_litter(p) / livewdcn(ivt(p))
                ! NOTE(slevis, 2014-12) Beth Drewniak suggested this instead
-               livestemn_to_litter(p) = livestemn(p) / dt * (1 - biofuel_harvfrac(ivt(p))) !livestemn_to_litter(p) = livestemn(p) / dt
+               livestemn_to_litter(p) = livestemn(p) / dt * (1._r8 - biofuel_harvfrac(ivt(p))) !livestemn_to_litter(p) = livestemn(p) / dt
             end if
 
             ! save the current litterfall fluxes
